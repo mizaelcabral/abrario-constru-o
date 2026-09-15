@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associação Abrario | Site em Construção</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animation background effect */
+        @keyframes subtleZoom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .bg-animated {
+            animation: subtleZoom 25s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between relative overflow-x-hidden select-none">
+
+    <!-- Background Image -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <img 
+            src="public/images/abrario-background.webp" 
+            alt="Abrario Background" 
+            class="w-full h-full object-cover object-center bg-animated"
+        />
+    </div>
+
+    <!-- Header: Logo Centralizado no Topo -->
+    <header class="relative z-10 w-full pt-8 pb-4 px-4 flex justify-center items-center">
+        <img 
+            src="public/images/abrario-logo.png" 
+            alt="Logo Associação Abrario" 
+            class="h-16 sm:h-20 md:h-24 object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
+        />
+    </header>
+
+    <!-- Main Content / Hero Section -->
+    <main class="relative z-10 my-auto px-4 sm:px-6 py-8 max-w-5xl mx-auto text-center flex flex-col items-center">
+        
+        <!-- Badge Status -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-8 shadow-lg backdrop-blur-md">
+            <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span>Site em Construção</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight sm:leading-tight mb-6 max-w-5xl mx-auto">
+            Preparando uma nova experiência<br class="hidden sm:inline" /> para a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-400">Associação Abrario</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+            Estamos desenvolvendo um novo portal mais moderno, rápido e acessível. Enquanto concluímos os últimos ajustes, você pode acessar a área do associado ou falar conosco via WhatsApp.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md sm:max-w-2xl mx-auto">
+            
+            <!-- Botão 1: Área do Associado -->
+            <a 
+                href="https://abrario.cplylegacy.com.br/AreaAssociados" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="group relative w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:to-indigo-500 shadow-xl shadow-blue-600/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 border border-blue-400/30 whitespace-nowrap"
+            >
+                <i class="fa-solid fa-user-shield text-xl text-blue-200 group-hover:scale-110 transition-transform"></i>
+                <span class="tracking-wide whitespace-nowrap">ÁREA DO ASSOCIADO</span>
+            </a>
+
+            <!-- Botão 2: Fale Conosco (WhatsApp) -->
+            <a 
+                href="https://wa.me/5521982043786?text=Ol%C3%A1%20Abrario%20estou%20precisando%20de%20atendimento!" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="group relative w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-700 hover:from-emerald-500 hover:to-green-500 shadow-xl shadow-emerald-600/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 border border-emerald-400/30 whitespace-nowrap"
+            >
+                <i class="fa-brands fa-whatsapp text-2xl text-emerald-200 group-hover:scale-110 transition-transform"></i>
+                <span class="tracking-wide whitespace-nowrap">FALE CONOSCO</span>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-6 px-4 text-center text-slate-400 text-xs sm:text-sm border-t border-white/5 w-full bg-slate-950/40 backdrop-blur-md">
+        <p>&copy; 2026 Associação Abrario. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
